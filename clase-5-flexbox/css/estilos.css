@@ -1,0 +1,24 @@
+.cajita {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 1px solid black;
+    margin: 1em;
+}
+
+section {
+    display: flex;
+    justify-content: center; /* para row ---> horizontal */
+    align-items: center;  /* vertical */
+}
+
+.cajita1 {
+    height: 100px;
+}
+
+.cajita2 {
+    height: 50px;
+}
+.cajita3 {
+    height: 150px;
+}

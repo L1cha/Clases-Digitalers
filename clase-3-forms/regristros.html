@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Clase 3</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bievenidos a Digitalers</h1>
+        <h2>Registro para crear un usuario nuevo</h2>
+    </header>
+    <main>
+        <form method="get">
+            <div>
+                <label for="txtnombre">Nombre:</label>
+                <div><input type="text" id="txtnombre" name="Nombre" required minlength="3" maxlength="10" placeholder="Ingrese su nombre" pattern="[A-Z][a-z]*$"></div>
+            </div>
+            <div>
+                <label for="txtapellido">Apellido:</label>
+                <div><input type="text" id="txtapellido" name="Apellido" required minlength="3" maxlength="10" placeholder="Ingrese su apellido"></div>
+            </div>
+            <div>
+                <label for="txtdocumento" id="txtdocumento" name="fechanacimiento">Documento</label>
+                <div><input type="number" name="documento" required min="1000000" max="60000000" placeholder="Ingrese DNI"></div>
+            </div>
+            <div>
+                <select name="paises" id="paises">
+                       <option value="Argentina">Argentina</option>
+                       <option value="Brasil">Brasil</option>
+                       <option value="Uruguay">Uruguay</option>
+                  </select>
+            </div>
+            <div>
+                <label for="txtEmail">Email:</label>
+                <div><input type="email" id="txtemail" name="email"></div>
+            </div>
+            <div>
+                <label for="txtpassword">Password:</label>
+                <div><input type="password" id="contra" name="contraseñas" required></div>
+            </div>
+            <div>
+                <label for="txtverificacionpassword">Verificar Password:</label>
+                <div><input type="password" id="txtverificacionpassword" name="verificaionpassword" required></div>
+            </div>
+            <div>
+                <label>Acepto Terminos y Condiciones<label>
+                        <input type="checkbox" id="terminosycondiciones" name="checkbox">
+            </div>
+
+
+
+            <button>Enviar Formulario</button>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
