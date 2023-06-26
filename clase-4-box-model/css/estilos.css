@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 
 
+body {background-color:	#FBEAEB;}
+
 button, input {
     font-family: 'Poppins', sans-serif;
 }
@@ -32,23 +34,27 @@ button, input {
     color: white;
 }
 
-.avatar1,.avatar2,.avatar3 {width: 100px;}
+.avatar1,.avatar2,.avatar3 {width: 100px;border: 2px solid black;border-radius: 10px;}
 
 
-#informacion,#noticias {text-align: center;}
+#informacion,#noticias {text-align: center;width: 80%;margin: auto;}
 
 h3 {text-align: center;}
 
 #comentarios {display: flex;justify-content: center;}
 
-p {text-align: center;background-color: #edf7ff;color: #04146C;font-family: 'Poppins', sans-serif;}
+p {text-align: center;background-color: lightgrey;color: #04146C;font-family: 'Poppins', sans-serif;font-size: 22px;}
+
+#h3_comentarios {color: #0a2ff1;margin: 20px;}
 
 
 h2 {
     font-family: 'Roboto', sans-serif;
     font-size: 50px;
-    color: #04146C;
+    color: #0a2ff1;
     text-align: center;
+    padding: 5px;
+    margin: 10px;
 }
 
 h3 {
@@ -84,13 +90,11 @@ form {
     margin: auto; 
 }
 
-p {font-size: 22px;}
-
-.avatar {background-color: white;}
-
 #noticias {padding: 80px;}
 
 footer {padding: 40px;}
+
+#copy {background-color: #FBEAEB;}
 
 /* boton facha */
 
@@ -114,7 +118,7 @@ button {
     transform: translate(-50%, -50%);
     height: 30px;
     width: 30px;
-    background-color: #0c66ed;
+    background-color: #0a2ff1;
     border-radius: 50%;
     transition: .6s ease;
   }
