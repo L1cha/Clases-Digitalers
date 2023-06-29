@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: #b0b8b9;
+        }
+
+        body>div {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        body>div>div:nth-child(1) {
+            background-color: red;
+            flex-grow: 1;
+        }
+        
+        body>div>div:nth-child(2) {
+            background-color: yellow;
+            flex-grow: 3;
+            padding: 1em;
+            display: flex;
+        }
+
+        body>div>div:nth-child(2)>div:nth-child(1) {
+            background-color: orange;
+            flex-grow: 3;
+        }
+
+        body>div>div:nth-child(2)>div:nth-child(2) {
+            background-color: blue;
+            flex-grow: 3;
+        }
+
+        body>div>div:nth-child(3) {
+            background-color: green;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div></div>
+        <div>
+            <div></div>
+            <div></div>
+        </div>
+        <div></div>
+    </div>
+</body>
+</html>
