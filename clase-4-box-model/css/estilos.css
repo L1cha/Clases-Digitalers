@@ -12,7 +12,6 @@ button, input {
     margin: 0;
     padding: 0;
     text-decoration: none;
-
 }
 
 .img_principal {
@@ -28,8 +27,7 @@ button, input {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    color: lightblue;
-    font-size: 30px;
+    font-size: 50px;
     font-family: 'Roboto', sans-serif;
     color: white;
 }
@@ -151,6 +149,3 @@ button {
     transform: translate(-50%, -50%) scale(4);
     transition: 1.5s ease;
   }
-    
-
-
