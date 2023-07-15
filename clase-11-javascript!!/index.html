@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Clase 11 javascript</title>
+    <script>
+        // Esto es un comentario de prueba
+        
+        /* Ejemplo 1 
+        let nombre = "Lisandro";
+        const nacimiento = 2001;
+        let variable;
+
+        console.log("Hola " + nombre + " del " + nacimiento);
+        console.log(typeof nombre)
+        console.log(typeof nacimiento)
+        console.log(typeof variable)  */
+
+        
+        /* Ejemplo 2
+        const numA = 25;
+        const numB = 25;
+        console.log(numA + numB)  */
+
+        /* Ejemplo 3 string + numero = string
+
+        const numA = "20";
+        const numB = 2;
+        console.log(numA + numB)  */
+
+        /* Ejmplo 4 
+        const numA = 20;
+        const numB = "2";
+        console.log(numA + numB)  */
+
+        /* Ejemplo 5  //ojo con los nombre de las variable
+        let a = 2023
+        let b = 0
+        let resultado = a / b;
+        console.log(resultado); // << Da Infinity 
+        let c = Infinity;
+        console.log(c);
+        let d = NaN; // Not Number 
+        console.log(d);
+        console.log(typeof d); // Number
+        let e = Math.sqrt(-1);
+        console.log(e) // NaN */
+
+        /* Ejemplo 6- Alert*/
+        // alert("Hola capo")
+        // alert("Hola capo")
+
+        // Ejemplo 7 - Propmpt 
+        /*
+        let nombre = prompt("Como te llamas capo?")
+        let nacimiento = prompt("Cuando naciste?")
+        alert("Hola " + nombre + " del " + nacimiento)
+        console.log(typeof nombre);
+        console.log(typeof nacimiento); */
+
+        /*
+        let edad = prompt("Ingrese su edad")
+        if (edad >= 18) {                      
+            alert("Usted es mayor de edad") 
+        }else {
+            alert("Usted es menor de edad")
+        }
+        */
+        /*
+        let punto = {x:10, y:20}; // Javascript object Notation (JSON)
+        console.log(typeof punto)
+        console.log(punto);
+        console.log(punto.x);
+        console.log(punto.y); */
+        
+        /* Ejemplo 8 - object
+
+        const persona = {
+            nombre : "Lisandro",   // campo,miembro,atributo(clave:valor)
+            apellido : "Principe",
+            edad : 21
+        };
+        console.log(persona);          // [Obeject object]
+        console.log(JSON.stringify(persona)); // JSON.stringify 
+        console.log(persona.nombre)
+        console.log(persona.apellido)
+        console.log(persona.edad)
+        console.log(persona["nombre"])
+        console.error(persona.nombre + ' ' + persona.apellido)
+        console.table(persona);
+        console.log("%c " + persona.nombre, "font-size:30px;color: black;padding: 10px;background-color: yellow;border:2px solid black;")
+        console.log(`%c ${persona.nombre} ${persona.apellido}`, "color: purple;") // Strings interpolados con back tick  */
+
+
+        // Vamos probando distintos valores
+        // let respuesta = false
+        //let respuesta = true
+
+        let edad = 20;
+        let tienePermiso = true
+        // let respuesta = (edad >= 18); // expresion booleana
+        // let respuesta = (edad>=18) && tienePermiso
+        // let respuesta = (edad>=18) || tienePermiso  //  || = or o 
+
+        //let respuesta = 0;  // false                        >> falsy
+        //let respuesta = 212 // verdadero (cualquier numero) >> truthy
+        //let respuesta = "Hola que tal";  >> truthy
+        //let respuesta = "   ";       >> truthy
+        //let respuesta = "";          >> falsy
+        //let respuesta = NaN;         >> falsy
+        //let respuesta = Infinity;    >> truthy
+        //let respuesta = 100 / 0;     >> truthy
+        //let respuesta = undefined    >> falsy
+        //let respuesta = null;        >> falsy
+        //let respuesta = {};          >> truthy
+
+        let respuesta = confirm("Esta seguro que quiere entar a la parte prohibida del sitio?")
+        
+        console.log(typeof respuesta);
+        if (respuesta){
+            console.log("%cAcceso Concedido", "font-size: 30px;color: green;");
+        }else {
+            console.log("%cAcceso Denegado", "font-size: 30px;color: red;");
+        }
+
+        
+
+    </script>
+</head>
+<body style="background-color: yellow;">
+    <h1 style="color: black;">Bienvenidos a JavaScript</h1>
+</body>
+</html>
