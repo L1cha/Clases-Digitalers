@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Introduccion POO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script>
+        //Vamos a crear una lista de juegos que son objetos json
+        // Version 1 : Array de objetos JSON
+        /* let juegos = [
+            {
+            nombre: "Pac Man", 
+            genero: "Plataforma",
+            descripcion: "waka waka waka waka", 
+            imagen: "imagenes/pacman.jpg",
+            puntuacion: 5
+            },
+            {
+            nombre: "W40K space marine",
+            genero:"Estrategia",
+            descripcion: "Un soldado que se los carga a todos",
+            imagen: "imagenes/warhammer.jpg"
+            },
+            {
+            nombre: "Assasin Creed", 
+            genero: "Aventura",
+            descripcion: "Un asesino del pasado que mata a todos", 
+            imagen: "imagenes/assasins.png"
+            }
+        ]; */
+
+        // Version 2 - Sintaxis objetos con function con el nombre de la function en Mayuscula
+        /*function Juego(nombre,genero,descripcion,imagen){
+            this.nombre = nombre;
+            this.genero = genero;
+            this.descripcion = descripcion;
+            this.imagen = imagen;
+        }*/
+
+        // Version 3 con la sintaxis de clase
+        class Juego {
+            constructor(nombre, genero, descripcion, imagen) {
+                this.nombre = nombre;
+                this.genero = genero;
+                this.descripcion = descripcion;
+                this.imagen = imagen;
+            }
+            // getter (encapsulamiento)
+            getNombre() {
+                // Siempre lo muestro con la primer letra en mayuscula
+                return this.nombre.charAt(0).toUpperCase() + this.nombre.slice(1);;
+            }
+            getGenero() {
+                return this.toUpperCase();
+            }
+            getDescripcion() {
+                return this.descripcion.charAt(0).toUpperCase() + this.descripcion.slice(1);
+            }
+            getImagen() {
+                return this.imagen
+            }
+            //el toString es un metodo que ya existe, 
+            //le estoy sobrescribriendo
+            // si no muestra Object Object
+            // Polimorfismo
+            toString() {
+                return this.constructor.name + " " + this.nombre;  
+
+            }
+        }
+        // el new llama a Juego 
+        let juegos = [
+            new Juego("Pac Man", "Plataforma", "waka waka waka waka", "imagenes/pacman.jpg"),
+            new Juego("W40K Space Marine", "Estrategia", "Un soldado que se los carga a todos", "imagenes/warhammer.jpg"),
+            new Juego("Assasin Creed", "Aventura", "Un asesino del pasado que mata en sigilo", "imagenes/assasins.png")
+        ]
+
+        function crearCarta(imagen, titulo, descripcion) {
+            return `
+                <div class="col-4">
+                    <div class="card h-100" style="width: 100%;">
+                        <img class="card-img-top" src="${imagen}" alt="Card image cap" style="height:150px">
+                        <div class="card-body">
+                        <h5 class="card-title">${titulo}</h5>
+                        <p class="card-text">${descripcion}</p>
+                    </div>
+                    </div>
+                </div>`
+        }
+
+        //$(document).ready()->{..})
+        window.addEventListener("load", () => {
+            setInterval(() => {
+                let fecha = new Date(); // Invocando al constructor de la clase fecha. new = crear objeto
+                document.getElementById("txtFecha").innerText =
+                    `${fecha.getDay()}/${fecha.getMonth()}/${fecha.getFullYear()}`;
+                document.getElementById("txtHora").innerText =
+                    `${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}`
+            }, 1000);
+
+            for (juego of juegos) {
+                // alert([].constructor.name);  para saber que es un array
+                alert(juego);   //  <<<<<<<<<<<<
+                // alert(juego.constructor.name) para saber de que tipo es 
+                document.getElementById("secJuegos").innerHTML 
+                += crearCarta(juego.getImagen(), juego.getNombre(), juego.getDescripcion(),);
+            }
+        })
+    </script>
+</head>
+
+<body style="background-color: lightblue;">
+    <header class="alert alert-info text-center">
+        <h1>Programacion Orientada a Objetos POO</h1>
+        <h5 id="txtFecha" class="text-end">{fecha}</h5>
+        <h5 id="txtHora" class="text-end">{}</h5>
+    </header>
+    <main class="container">
+        <section id="secJuegos" class="row">
+
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
