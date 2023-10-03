@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-reveal": "^1.2.2",
+    "sweetalert2": "^11.7.31"
+  }
+}
